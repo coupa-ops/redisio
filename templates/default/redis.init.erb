@@ -72,9 +72,8 @@ case "$1" in
     status)
         if [ -f $PIDFILE ]
         then
-            echo "process is running"
             PID=$(cat $PIDFILE)
-            echo "pid is $PID"
+            echo "redis-server ($PID) is running..."
         else
             echo "Redis server is not running ..."
         fi
